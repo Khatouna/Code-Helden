@@ -1,0 +1,208 @@
+
+
+/*Kontakt-Bestätigung --> HTML - Seite*/
+
+.contact_confirmation {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 40px 50px;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-top: 6px solid #F1C953;
+
+    text-align: center;
+}
+
+.contact_confirmation h3 {
+    font-family: 'Arima', sans-serif;
+    font-size: 32px;
+    color: #4EA487;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.contact_confirmation p {
+    font-family: 'Palanquin', sans-serif;
+    font-size: 18px;
+    color: #54370D;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/*Impressum --> HTML - Seite*/
+
+.impressum {
+    background-color: #4EA487;
+    height: 128px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 60px;
+}
+
+.main {
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*main-Header */
+.main-header img {
+    height: 72px;
+    width: 72px;
+    margin: 0px 120px 0px 120px;
+}
+
+/*Schriftart im Header*/
+.nav-bar a {
+    font-family: 'Arima';
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/*Header mit grünem Hintergrund*/
+.main-header {
+    background-color: #4EA487;
+    height: 128px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 60px;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-bar a:hover {
+    color: #F1C953;
+}
+
+/*main-Header */
+
+
+
+
+
+
+
+
+
+
+/*Header --> Gelber Bereich muss noch ergenzt werden*/
+
+.header-section {
+    background-color: #F1C953;
+    height: 515px;
+    width: 100%;
+}
+
+/*Header */
+
+/*Hero*/
+.hero-section {
+    height: 530px;
+    width: 100%;
+    max-width: 1200px;
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*Hero*/
+
+
+
+
+
+
+
+
+/*Footer */
+
+.main-footer {
+    background-color: #4EA487;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 120px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-menu,
+.footersome {
+    font-family: 'Palanquin';
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    gap: 72px;
+}
+
+.copyright {
+    display: flex;
+    gap: 5px;
+}
+
+.footersome a,
+.footersome {
+    color: white;
+    text-decoration: none;
+}
+
+.footersome a:hover,
+.footersome:hover {
+    color: #F1C953;
+}
+
+.footer-socialMedia {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-socialMedia img {
+    height: 32px;
+    width: 32px;
+}
+
+/* --- Social Media Icons --- */

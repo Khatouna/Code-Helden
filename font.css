@@ -121,8 +121,8 @@ html {
 
 
 h1 {
-    font-family: var(--font-display);
-    font-size: var(--text-size-52px);
+    font-family: var(--font-nav_headlines_buttons);
+    font-size: var(--text-size-64px);
     font-weight: var(--weight-bold);
     line-height: var(--leading-normal);
     letter-spacing: var(--tracking-tight);
@@ -146,7 +146,7 @@ h2 {
 
 
 
-h4 {
+h3 {
     font-family: var(--font-nav_headlines_buttons);
     font-size: var(--text-size-32px);
     font-weight: var(--weight-semibold);
@@ -155,7 +155,7 @@ h4 {
 }
 
 
-h5 {
+h4 {
     font-family: var(--font-nav_headlines_buttons);
     font-size: var(--text-size-18px);
     font-weight: var(--weight-bold);
@@ -163,7 +163,7 @@ h5 {
     color: var(--color-text-secondary);
 }
 
-/*h5 für Auhtor info*/
+/*h4 für Auhtor info*/
 
 
 
