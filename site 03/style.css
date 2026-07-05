@@ -1,4 +1,4 @@
-/* ─── Reset ─────────────────────────────────────── */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ main {
     flex: 1;
 }
 
-/*  Content Wrapper */
+/* Content Wrapper  */
 .content-wrapper {
     max-width: 1200px;
     width: 100%;
@@ -34,13 +34,13 @@ main {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 60px;
 }
 
 .main-header img {
     height: 72px;
     width: 72px;
-    margin: 0 120px 0 0;
+    margin: 0 120px 0 120px;
 }
 
 .nav-bar {
@@ -202,34 +202,49 @@ h1 {
     color: #3D3D3D;
 }
 
-/*  Video  */
-.video-section {
+/* Diagramm */
+
+.diagram-Rain-periopds-section {
+    text-align: center;
+    gap: 24px;
+
+}
+
+.diagram-beach-acommodation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 0 50px;
     width: 100%;
+
+}
+
+.beach-diagram,
+.acommodation-diagram {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1;
 }
 
-
-.video-wrapper{
-    width: 930px;
-    max-width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 50px;
-    overflow: hidden;
-    position: relative;
+.beach-diagram img,
+.acommodation-diagram img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
 }
 
-
-.video-wrapper video {
-    width: 931px;
-    height: 520px;
-    object-fit: cover;
-    display: block;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Textbereich gleich hoch → Bilder auf gleicher Linie */
+.beach-diagram p,
+.acommodation-diagram p {
+    text-align: left;
+    min-height: 275px;
 }
+
 
 
 
@@ -252,67 +267,6 @@ h1 {
 .text-list li::marker {
     color: #3D3D3D;
     font-size: 14px;
-}
-/* Pro Tipps */
-.pro-tipps-section {
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 40px;
-}
-
-.pro-tipps-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #4EA487;
-    border-radius: 10px;
-    padding: 8px 16px;
-    width: fit-content;
-    transform: rotate(-13.67deg);
-    transform-origin: left center;
-    margin-left: 8px;
-    margin-bottom: -40px;
-}
-
-.pro-tipps-badge svg {
-    transform: rotate(15deg);
-    transform-origin: center;
-}
-
-.pro-tipps-badge span {
-    font-family: 'Palanquin', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 120%;
-    color: #F1C953;
-}
-
-.pro-tipps-box {
-    background: rgba(78, 164, 135, 0.2);
-    border-radius: 30px;
-    padding: 26px 32px 24px;
-    margin-left: 85px;
-}
-
-.tipps-list li::marker {
-    font-weight: 700;
-    color: #4EA487;
-}
-
-
-
-.tipps-link {
-    color: #4EA487;
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.2s ease;
-}
-
-.tipps-link:hover {
-    color: #54370D;
 }
 
 
@@ -381,7 +335,7 @@ h1 {
     background: #3d8a70;
 }
 
-/* Share Wrapper */
+/* Share Wrapper  */
 .share-toggle {
     display: none;
 }
@@ -560,7 +514,7 @@ h1 {
     width: 32px;
 }
 
-/* Sonstige bestehende Klassen */
+/*  Sonstige bestehende Klassen */
 .contact_confirmation {
     max-width: 650px;
     margin: 60px auto;

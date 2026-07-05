@@ -127,6 +127,9 @@ h1 {
     line-height: var(--leading-normal);
     letter-spacing: var(--tracking-tight);
     color: var(--color-text-accent);
+    margin: 0px;
+    
+    
 }
 
 /* Heroheadlines */
@@ -151,7 +154,9 @@ h3 {
     font-size: var(--text-size-32px);
     font-weight: var(--weight-semibold);
     line-height: var(--leading-normal);
-    color: var(--color-text-secondary)
+    color: var(--color-text-secondary);
+    text-align: center;
+    width: 100%;
 }
 
 
@@ -185,6 +190,46 @@ p {
     font-weight: var(--weight-regular);
     line-height: var(--leading-normal);
     color: var(--color-text-body);
+    margin: 0;
+}
+
+.p-hero-section{   
+    font-family: var(--font-body);
+    font-size: var(--text-size-28px);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-snug);
+    color: var(--color-text-secondary);
+}
+
+.p-author-text {
+    font-family: var(--font-body);
+    font-size: var(--text-size-16px);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-normal);
+    color: var(--color-text-secondary);
+    
+}
+
+.tipps-list {
+    list-style: decimal;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: var(--font-body);
+    font-weight: var(--weight-regular);
+    font-size: var(--text-size-24px);
+    line-height: var(--leading-normal);
+    color: var(--color-text-body);
+}
+
+.beach-diagram p,
+.acommodation-diagram p {
+    font-family: var(--font-body);
+    font-weight: var(--weight-regular);
+    font-size: var(--text-size-24px);
+    line-height: var(--leading-normal);
+    color: var(--color-text-secondary);
 }
 /* Fließstext Article 1-3 */
 
@@ -224,41 +269,53 @@ p {
 /*headline des Slider auf der Mainpage*/
 
 
-
-.subheadline_Hero {
+/*Subheadline über den h1 im Herobereich der Article 1,2 und 3*/
+.subheadline-Hero {
     font-family: var(--font-nav_headlines_buttons);
     font-size: var(--text-size-40px);
     font-weight: var(--weight-semibold);
     line-height: var(--leading-normal);
     color: var(--color-text-primary);
+    
 }
-
 /*Subheadline über den h1 im Herobereich der Article 1,2 und 3*/
 
 
-.headline_Pro_tipps_Icon {
-    font-family: var(--font-body);
-    font-size: var(--text-size-28px);
+.headline-Author{
+    font-family: var(--font-nav_headlines_buttons);
+    font-size: var(--text-size-18px);
     font-weight: var(--weight-bold);
     line-height: var(--leading-normal);
-    color: var(--color-text-accent);
+    color: var(--color-text-secondary);
+    margin: 0;
 }
 
-/* Glühbirne mit "Pro tipps" */
 
 
-.subheadline_Author {
+
+.subheadline-Author{
     font-family: var(--font-nav_headlines_buttons);
     font-size: var(--text-size-18px);
     font-weight: var(--weight-regular);
     line-height: var(--leading-normal);
     color: var(--color-text-secondary);
+    padding-bottom: 12px;
+    margin: 0;
 }
-    
+
+
+
+
+
+/* Glühbirne mit "Pro tipps" */
+
+
+
+
 
 /* Meta-Infos (Datum, Lesezeit, Read, Shared=) */
 
-.meta {
+.meta-icon-text{
     font-family: var(--font-body);
     font-size: var(--text-size-16px);
     font-weight: var(--weight-regular);
@@ -308,7 +365,7 @@ p {
 
 /*Für die 4 FAQ-Question und Answer*/
 
-/* Footer */ 
+/* Footer */
 
 .footersome {
     font-family: var(--font-body);
@@ -318,7 +375,7 @@ p {
     color: var(--color-text-inverse);
 }
 
-/* Links */ 
+/* Links */
 
 a {
     color: var(--color-text-primary);
@@ -334,45 +391,129 @@ a:hover {
 /* ============================================================
    5. UTILITY CLASSES
    ============================================================ */
- 
+
 /* Schritfgrößen */
-.text-size-15px { font-size: var(--text-size-15px); }
-.text-size-16px { font-size: var(--text-size-16px); }
-.text-size-18px { font-size: var(--text-size-18px); }
-.text-size-24px { font-size: var(--text-size-24px); }
-.text-size-28px { font-size: var(--text-size-28px); }
-.text-size-32px { font-size: var(--text-size-32px); }
-.text-size-40px { font-size: var(--text-size-40px); }
-.text-size-48px { font-size: var(--text-size-48px); }
-.text-size-52px { font-size: var(--text-size-52px); }
-.text-size-64px { font-size: var(--text-size-64px); }
- 
+.text-size-15px {
+    font-size: var(--text-size-15px);
+}
+
+.text-size-16px {
+    font-size: var(--text-size-16px);
+}
+
+.text-size-18px {
+    font-size: var(--text-size-18px);
+}
+
+.text-size-24px {
+    font-size: var(--text-size-24px);
+}
+
+.text-size-28px {
+    font-size: var(--text-size-28px);
+}
+
+.text-size-32px {
+    font-size: var(--text-size-32px);
+}
+
+.text-size-40px {
+    font-size: var(--text-size-40px);
+}
+
+.text-size-48px {
+    font-size: var(--text-size-48px);
+}
+
+.text-size-52px {
+    font-size: var(--text-size-52px);
+}
+
+.text-size-64px {
+    font-size: var(--text-size-64px);
+}
+
 /* Schriftstärke */
-.font-regular  { font-weight: var(--weight-regular);  }
-.font-medium   { font-weight: var(--weight-medium);   }
-.font-semibold { font-weight: var(--weight-semibold); }
-.font-bold     { font-weight: var(--weight-bold);     }
- 
+.font-regular {
+    font-weight: var(--weight-regular);
+}
+
+.font-medium {
+    font-weight: var(--weight-medium);
+}
+
+.font-semibold {
+    font-weight: var(--weight-semibold);
+}
+
+.font-bold {
+    font-weight: var(--weight-bold);
+}
+
 /* Text-Arten */
-.font-body               { font-family: var(--font-body);               }
-.font-slider             { font-family: var(--font-slider);             }
-.font-nav_headlines_buttons { font-family: var(--font-nav_headlines_buttons); }
- 
+.font-body {
+    font-family: var(--font-body);
+}
+
+.font-slider {
+    font-family: var(--font-slider);
+}
+
+.font-nav_headlines_buttons {
+    font-family: var(--font-nav_headlines_buttons);
+}
+
 /* Text-Farben */
-.text-primary   { color: var(--color-text-primary);   }
-.text-secondary { color: var(--color-text-secondary); }
-.text-body      { color: var(--color-text-body);      }
-.text-button    { color: var(--color-text-button);    }
-.text-accent    { color: var(--color-text-accent);    }
-.text-inverse   { color: var(--color-text-inverse);   }
-.text-header    { color: var(--color-text-header);    }
- 
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-body {
+    color: var(--color-text-body);
+}
+
+.text-button {
+    color: var(--color-text-button);
+}
+
+.text-accent {
+    color: var(--color-text-accent);
+}
+
+.text-inverse {
+    color: var(--color-text-inverse);
+}
+
+.text-header {
+    color: var(--color-text-header);
+}
+
 /* Zeilenhöhen */
-.leading-thight { line-height: var(--leading-thight); }
-.leading-none   { line-height: var(--leading-none);   }
-.leading-snug   { line-height: var(--leading-snug);   }
-.leading-normal { line-height: var(--leading-normal); }
- 
+.leading-thight {
+    line-height: var(--leading-thight);
+}
+
+.leading-none {
+    line-height: var(--leading-none);
+}
+
+.leading-snug {
+    line-height: var(--leading-snug);
+}
+
+.leading-normal {
+    line-height: var(--leading-normal);
+}
+
 /* Zeichenabstand */
-.tracking-normal { letter-spacing: var(--tracking-normal); }
-.tracking-wide   { letter-spacing: var(--tracking-wide);   }
+.tracking-normal {
+    letter-spacing: var(--tracking-normal);
+}
+
+.tracking-wide {
+    letter-spacing: var(--tracking-wide);
+}
