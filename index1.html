@@ -1,95 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article 01 / Carousel</title>
 
-
-
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
 
         body {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
+        }
+
+        .destinations-section {
+            width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .destinations-section p {
+            font-family: 'Arima';
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #54370D;
         }
 
         .slider-container {
-            height: 300px;
-
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1100px;
+            height: 440px;
         }
 
+        /* Der Wrapper kontrolliert die Größe, Position und die 3D-Ebene */
         .slider-item {
+            position: relative;
+            width: 3200px;
+            height: 320px;
+            margin-left: -60px;
+            /* Zieht das Element nach links über das vorherige */
+            transition: all 250ms ease-in-out;
+            /* Weiche, natürliche Animation */
+
+            /* 3D-Effekt: Kippt die Karte nach hinten */
+            transform: perspective(1100px) rotateY(40deg) translateX(-40px);
+
+
+
+            /* Schatten gibt die nötige Tiefe zur Abgrenzung */
+            box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 16px;
             z-index: 1;
-            width: 100px;
-            height: 80%;
-
-            
-            box-shadow: 0px 4px 3px rgba(3, 7, 18, 0.03),
-                0px 14px 11px rgba(3, 7, 18, 0.05),
-                0px 32px 24px rgba(3, 7, 18, 0.08);
-
-
-            transform: perspective(250px) rotateY(20deg) translateX(-20px);
-            transform-origin: 50% 50%;
         }
 
+        /* Das erste Element darf keinen negativen Abstand nach links haben */
+        .slider-item:first-child {
+            margin-left: 0;
+        }
+
+        /* Das eigentliche Bild füllt den Wrapper komplett aus */
+        .slider-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Verhindert das Stauchen oder Strecken der Bilder */
+            border-radius: 16px;
+            /* Gleiche Rundung wie beim Wrapper */
+            display: block;
+        }
+
+        /* Das passiert beim Hovern */
+        /* Das fokussierte Element bekommt den höchsten Wert */
         .slider-item:hover {
-            z-index: 3 ;
-            transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+            z-index: 6;
+            transform: perspective(1200px) rotateY(0deg) scale(1.1) translateY(0px);
+
+            /* Kleiner Tipp: Hier fehlte in deinem Original-Code das Semikolon am Ende! ;) */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 1. Geschwister-Element rechts (und alle danach) */
+        .slider-item:hover~.slider-item {
+            transform: perspective(1100px) rotateY(-40deg) translateX(40px);
+            z-index: 5;
+            /* Niedriger als das gehoverte Bild */
+        }
+
+        /* 2. Geschwister-Element rechts (und alle danach) */
+        .slider-item:hover~.slider-item~.slider-item {
+            z-index: 4;
+            /* Noch etwas niedriger */
+        }
+
+        /* 3. Geschwister-Element rechts (und alle danach) */
+        .slider-item:hover~.slider-item~.slider-item~.slider-item {
+            z-index: 3;
+        }
+
+        /* 4. Geschwister-Element rechts (für dein 5tes Bild) */
+        .slider-item:hover~.slider-item~.slider-item~.slider-item~.slider-item {
+            z-index: 2;
+        }
+
+        .slider-item:hover~.slider-item {
+            transform: perspective(1100px) rotateY(-40deg) translateX(40px);
+
         }
     </style>
-
-
-
-
 </head>
 
 <body>
 
-
-
     <section class="destinations-section">
-
+        <p>TOP 5 beach destinations for 2026</p>
         <div class="slider-container">
-
-            <div>
-                <img class="slider-item" src="./assets/img/carousel/carousel-1.png" alt="Beach destination 1">
+            <div class="slider-item">
+                <img src="./assets/img/carousel/carousel-1.png" alt="Beach destination 1">
             </div>
-
-            <div>
-                <img class="slider-item" src="./assets/img/carousel/carousel-2.png" alt="Beach destination 2">
+            <div class="slider-item">
+                <img src="./assets/img/carousel/carousel-2.png" alt="Beach destination 2">
             </div>
-
-            <div>
-                <img class="slider-item" src="./assets/img/carousel/carousel-3.png" alt="Beach destination 3">
+            <div class="slider-item">
+                <img src="./assets/img/carousel/carousel-3.png" alt="Beach destination 3">
             </div>
-
-            <div>
-                <img class="slider-item" src="./assets/img/carousel/carousel-4.png" alt="Beach destination 4">
+            <div class="slider-item">
+                <img src="./assets/img/carousel/carousel-4.png" alt="Beach destination 4">
             </div>
-
-            <div>
-                <img class="slider-item" src="./assets/img/carousel/carousel-5.png" alt="Beach destination 5">
+            <div class="slider-item">
+                <img src="./assets/img/carousel/carousel-5.png" alt="Beach destination 5">
             </div>
-
         </div>
     </section>
-
-
-
-
-
-
-
 
 </body>
 

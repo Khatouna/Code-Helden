@@ -1,221 +1,352 @@
 /* Grundlegendes Reset für konsistente Abstände */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    caret-color: transparent !important;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 
 
 
-
-
-
-
-
-/* --- Haupt-Layout (Roter Rahmen) --- */
-.carousel_header_section {
-    display: grid;
-    /* Linke Spalte bekommt 2/3 des Platzes, rechte 1/3 */
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+.content-wrapper {
+    /* 1. Die Breite - 1200px */
     max-width: 1200px;
-    margin: 0 auto;
-}
+    width: 100%;
 
-/* --- Linke Spalte (Grüner Rahmen links) --- */
-.carousel_header_info {
+    margin: 80px auto 120px auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Zentriert den Inhalt vertikal */
+    gap: 120px;
 }
 
-.kicker {
-    color: #4EA487;
-    font-family: 'Palanquin';
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 8px;
+
+
+
+
+
+
+
+
+
+/*main-Header */
+.main-header img {
+    height: 72px;
+    width: 72px;
+    margin: 0px 120px 0px 120px;
 }
 
-.title {
-    color: #F1C953;
+/*Schriftart im Header*/
+.nav-bar a {
     font-family: 'Arima';
-    font-size: 56px;
+    font-size: 24px;
     font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 8px;
+    color: white;
+    text-decoration: none;
 }
 
-.description {
-    font-family: 'Palanquin';
-    font-size: 32px;
-    font-weight: 400;
-    color: #54370d;
-    line-height: 1.2;
-    margin-bottom: 32px;
-}
+/*Header mit grünem Hintergrund*/
+.main-header {
+    background-color: #4EA487;
+    height: 128px;
+    width: 100%;
 
-/* Metadaten (Lila Rahmen unten) */
-.metadata {
     display: flex;
+    align-items: center;
+    padding: 0px 60px;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-bar a:hover {
+    color: #F1C953;
+}
+
+/*main-Header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Hero */
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 21px;
+    width: 100%;
+}
+
+/* Linke Spalte */
+.hero-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    flex: 1;
+}
+
+/* Headline-Block */
+.hero-headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subheadline-Hero {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    color: #4EA487;
+}
+
+h1 {
+    font-family: 'Arima', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    color: #F1C953;
+}
+
+.p-hero-section {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 110%;
+    color: #54370D;
+}
+
+/* Meta Icons */
+.hero-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 32px;
-    flex-wrap: wrap;
-    /* Bricht um, wenn der Platz zu eng wird */
-    font-family: 'Palanquin';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #54370d;
 }
 
-.meta-item {
+.hero-icon {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 6px;
 }
 
-.icon {
-    color: #4EA487;
-}
-
-/* --- Rechte Spalte: Autoren-Box (Grüner Rahmen rechts) --- */
-.author-card {
-    background-color: rgba(78, 164, 135, 0.2);
-    /*#4EA48733 & 20%*/
-    padding: 16px;
-    border-radius: 16px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.author-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 30px;
-    object-fit: cover;
-    margin-bottom: 8px;
-
-}
-
-.author-name {
-    font-family: 'Arima';
-    font-size: 18px;
-    font-weight: 700;
-    color: #54370D;
-    line-height: 1.2;
-}
-
-.author-title {
-    font-family: 'Arima';
-    font-size: 18px;
-    color: #54370D;
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-.author-bio {
-    font-family: 'Palanquin';
-    font-size: 16px;
+.meta-icon-text {
+    font-family: 'Palanquin', sans-serif;
     font-weight: 400;
-    line-height: 1.2;
-    text-align: left;
-    /* Der Text in der Vorlage ist linksbündig */
+    font-size: 16px;
+    line-height: 120%;
     color: #54370D;
 }
 
-
-
-
-
-
-
-
-
-
-/* Grundlegendes Styling für die Section (optional, für Zentrierung) */
-.destinations-section {
+/* Rechte Spalte — Author */
+.hero-author {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #e9ecef;
-    /* Leicht grauer Hintergrund, damit die Schatten wirken */
-    font-family: sans-serif;
-    overflow: hidden;
-}
-
-.section-title {
-    margin-bottom: 34px;
-    color: #333;
-}
-
-/* Der Container: Hier aktivieren wir den 3D-Raum */
-.slider-container {
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 440px;
-    /* Neue Höhe nach Vorgabe */
-    perspective: 1500px;
-    margin: 0 auto;
+    padding: 16px;
+    gap: 16px;
+    width: 272px;
+    flex-shrink: 0;
+    background: rgba(78, 164, 135, 0.2);
+    border-radius: 30px;
+    text-align: center;
 }
 
-/* Die einzelnen Bilder/Karten im Normalzustand */
+.author-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.headline-Author {
+    font-family: 'Arima', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    color: #54370D;
+    text-align: center;
+}
+
+.subheadline-Author {
+    font-family: 'Arima', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: #54370D;
+    text-align: center;
+}
+
+.p-author-text {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #54370D;
+    text-align: left;
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.destinations-section {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destinations-section p {
+    font-family: 'Arima';
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #54370D;
+    padding: 50px 0px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1100px;
+    height: 440px;
+}
+
+/* Der Wrapper kontrolliert die Größe, Position und die 3D-Ebene */
 .slider-item {
     position: relative;
-    flex: 1;
-    /* Teilt die 1300px gleichmäßig auf alle 5 Bilder auf */
-    height: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
+    width: 3200px;
+    height: 320px;
+    margin-left: -60px;
+    /* Zieht das Element nach links über das vorherige */
+    transition: all 250ms ease-in-out;
+    /* Weiche, natürliche Animation */
 
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-    transform: rotateY(20deg) scale(1);
-    margin-left: -50px;
-    box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.2);
+    /* 3D-Effekt: Kippt die Karte nach hinten */
+    transform: perspective(1100px) rotateY(40deg) translateX(-40px);
+
+
+
+    /* Schatten gibt die nötige Tiefe zur Abgrenzung */
+    box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    z-index: 1;
 }
 
-/* Das erste Element braucht keinen negativen Rand nach links */
+/* Das erste Element darf keinen negativen Abstand nach links haben */
 .slider-item:first-child {
     margin-left: 0;
 }
 
-/* Das eigentliche Bild füllt den Container perfekt aus */
+/* Das eigentliche Bild füllt den Wrapper komplett aus */
 .slider-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Verhindert Verzerrungen, Bild wird angeschnitten */
-    transition: all 150ms ease;
+    /* Verhindert das Stauchen oder Strecken der Bilder */
+    border-radius: 16px;
+    /* Gleiche Rundung wie beim Wrapper */
+    display: block;
 }
 
-/* ------------------------------------------- */
-/* HOVER-EFFEKT: Wenn die Maus das Bild berührt */
-/* ------------------------------------------- */
+/* Das passiert beim Hovern */
+/* Das fokussierte Element bekommt den höchsten Wert */
 .slider-item:hover {
-    flex: 1.5;
-    /* Gehovertes Bild nimmt deutlich mehr Breite ein als die restlichen */
-    transform: rotateY(0deg) scale(1);
-    /* Leicht vergrößert und gerade gestellt */
-    z-index: 1;
+    z-index: 6;
+    transform: perspective(1200px) rotateY(0deg) scale(1.1) translateY(0px);
 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    /* Kleiner Tipp: Hier fehlte in deinem Original-Code das Semikolon am Ende! ;) */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.slider-container:hover .slider-item:not(:hover) {
-    transform: rotateY(45deg) scale(0.95);
+/* 1. Geschwister-Element rechts (und alle danach) */
+.slider-item:hover~.slider-item {
+    transform: perspective(1100px) rotateY(-40deg) translateX(40px);
+    z-index: 5;
+    /* Niedriger als das gehoverte Bild */
+}
+
+/* 2. Geschwister-Element rechts (und alle danach) */
+.slider-item:hover~.slider-item~.slider-item {
+    z-index: 4;
+    /* Noch etwas niedriger */
+}
+
+/* 3. Geschwister-Element rechts (und alle danach) */
+.slider-item:hover~.slider-item~.slider-item~.slider-item {
+    z-index: 3;
+}
+
+/* 4. Geschwister-Element rechts (für dein 5tes Bild) */
+.slider-item:hover~.slider-item~.slider-item~.slider-item~.slider-item {
+    z-index: 2;
+}
+
+.slider-item:hover~.slider-item {
+    transform: perspective(1100px) rotateY(-40deg) translateX(40px);
+
 }
 
 
@@ -233,137 +364,341 @@ body {
 
 
 
-.article-body {
-    margin: 40px auto;
-    padding: 0 20px;
-    font-family: Arial, sans-serif;
-    /* Fallback, falls keine Font in style.css definiert ist */
-    color: #4A4A4A;
-    line-height: 1.6;
-    font-size: 15px;
+
+.text-section {
+    font-family: 'Palanquin';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #3D3D3D;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
 }
 
-.article-body p {
-    margin-bottom: 20px;
+
+
+.text-section-btw {
+    /* Laut deinem Screenshot (blaue Markierung) ist die Box 1130px breit */
+    width: 1100px;
+    max-width: 100%;
+    /* Verhindert horizontales Scrollen auf kleinen Screens */
+
+    /* Der wichtigste Befehl zum Zentrieren des gesamten Blocks: */
+    margin: 0 auto;
+
+    margin-top: 50px;
+
+    /* Elemente untereinander reihen */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    /* Abstand zwischen Absatz, Liste und Pro-Tipps */
 }
 
-.article-list {
-    margin-left: 20px;
-    margin-bottom: 30px;
-    padding-left: 20px;
+.text-list {
+    list-style: disc;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.article-list li {
-    margin-bottom: 10px;
+.text-list li::marker {
+    color: #3D3D3D;
+    font-size: 14px;
+}
+/* Pro Tipps */
+.pro-tipps-section {
+    display: flex;
+    flex-direction: column;
+    
+    margin-right: 50px;
+    margin-top: 40px;
 }
 
-.pro-tips-container {
-    width: 85%;
-    background-color: #E3EFE9;
-    border-radius: 12px;
-    padding: 30px 40px 20px 40px;
-    margin: 50px auto;
-    position: relative;
-}
-
-.pro-tips-badge {
-    background-color: #4FA284;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 6px;
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    transform: rotate(-6deg);
+.pro-tipps-badge {
     display: flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #4EA487;
+    border-radius: 10px;
+    padding: 8px 16px;
+    width: fit-content;
+    transform: rotate(-13.67deg);
+    transform-origin: left center;
+    margin-left: 8px;
+    margin-bottom: -30px;
+
+
 }
 
-.pro-tips-badge svg {
-    width: 18px;
-    height: 18px;
-    fill: none;
-    stroke: white;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.pro-tipps-badge svg {
+    transform: rotate(15deg);
+    transform-origin: center;
 }
 
-.pro-tips-container ol {
-    margin-left: 0;
-    padding-left: 20px;
-    color: #4A4A4A;
+.pro-tipps-badge span {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    color: #F1C953;
 }
 
-.pro-tips-container li {
-    margin-bottom: 10px;
+.pro-tipps-box {
+    background: rgba(78, 164, 135, 0.2);
+    border-radius: 30px;
+    padding: 26px 32px 24px;
+    margin-left: 75px;
+    margin-bottom: 50px;
 }
 
-.useful-link {
-    color: #4FA284;
-    text-decoration: none;
-    font-weight: bold;
+.tipps-list li::marker {
+    font-weight: 700;
+    color: #4EA487;
 }
 
-.useful-link:hover {
-    text-decoration: underline;
+
+
+.tipps-link {
+    color: #4EA487;
+    font-weight: 700;
+    transition: color 0.2s ease;
 }
 
-.share-cta-section {
-    margin-top: 60px;
+.tipps-link:hover {
+    color: #54370D;
+    text-decoration-line: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CTA / Follow Me */
+.cta-section {
+    /* Nimmt die volle Breite ein, damit wir den Inhalt darin zentrieren können */
+    width: 100%; 
+    display: flex;
+    justify-content: center; /* Zentriert den gesamten Block horizontal */
+    margin-top: 64px; /* Etwas Abstand zum vorherigen Text */
+    margin-bottom: 64px; /* Abstand zum Footer */
+}
+
+/* Wir packen alle Elemente in einen inneren Container, 
+   damit das Layout innerhalb stabil bleibt */
+.cta-content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 18px;
+    position: relative;
+    width: fit-content; /* Passt sich genau dem Inhalt an */
+}
+
+.cta-text {
+    font-family: 'Arima', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
     text-align: center;
+    color: #54370D;
+    max-width: 320px; /* Bricht den Text um, wie auf deinem Bild */
 }
 
-.share-cta-text {
-    color: #8C754C;
-    font-family: Georgia, serif;
-    font-size: 16px;
-    margin-bottom: 10px;
+.cta-arrow {
+    width: 95px;
+    height: 80px;
+    position: absolute;
+    /* Wir positionieren den Pfeil relativ zum Text/Button */
+    left: -80px;  /* Zieht den Pfeil nach links neben den Text */
+    top: 50%;     /* Startet auf halber Höhe */
+    transform: translateY(-50%); /* Zentriert den Pfeil perfekt vertikal */
 }
 
-.share-cta-action {
+/* --- Ab hier bleibt dein Share-Button/Popup CSS unangetastet! --- */
+
+
+.share-btn {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-top: -10px;
-}
-
-.share-arrow {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.btn-share {
-    background-color: #4FA284;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    padding: 0 24px;
     gap: 8px;
-    transition: background-color 0.3s;
+    width: 158px;
+    height: 48px;
+    background: #4EA487;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
 }
 
-.btn-share:hover {
-    background-color: #3f856a;
+.share-btn img {
+    width: 32px;
+    height: 32px;
 }
 
-.btn-share svg {
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: white;
-    stroke-width: 2;
+.share-btn span {
+    font-family: 'Arima', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: #F1C953;
 }
+
+.share-btn:hover {
+    background: #3d8a70;
+}
+
+/* Share Wrapper */
+.share-toggle {
+    display: none;
+}
+
+.share-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Share Button */
+.share-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    gap: 8px;
+    width: 158px;
+    height: 48px;
+    background: #4EA487;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.share-btn img {
+    width: 32px;
+    height: 32px;
+}
+
+.share-btn span {
+    font-family: 'Arima', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: #F1C953;
+}
+
+.share-btn:hover {
+    background: #3d8a70;
+}
+
+
+.share-toggle:checked ~ .share-btn {
+    pointer-events: none;
+}
+
+
+.share-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.share-toggle:checked ~ .share-overlay {
+    display: block;
+}
+
+/* Popup */
+.share-popup {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: transparent;
+    padding: 20px 16px 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 100;
+}
+
+.share-toggle:checked ~ .share-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* X zum Schließen */
+.share-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 22px;
+    height: 22px;
+    background: #F1C953;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    line-height: 1;
+}
+
+.share-close:hover {
+    transform: scale(1.15);
+}
+
+/* Icons */
+.share-popup-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.share-popup-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(78, 164, 135, 0.1);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.share-popup-icons a:hover {
+    background: rgba(78, 164, 135, 0.25);
+    transform: scale(1.1);
+}
+
+.share-popup-icons img {
+    width: 26px;
+    height: 26px;
+}
+
+
+
+
+
+
+
+
+

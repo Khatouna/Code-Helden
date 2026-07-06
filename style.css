@@ -880,6 +880,7 @@ main {
 /*Footer */
 
 .main-footer {
+    width: 100%;
     background-color: #4EA487;
     display: flex;
     justify-content: space-between;
