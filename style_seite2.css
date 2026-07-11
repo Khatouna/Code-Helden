@@ -1,0 +1,35 @@
+.video-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 930px;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.video-wrapper {
+    width: 930px;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 50px;
+    overflow: hidden;
+    pointer-events: auto;
+    /* Stellt sicher, dass der Wrapper Klicks zulässt */
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* Das Icon ignoriert Klicks komplett */
+    z-index: 0;
+    /* Icon bleibt sichtbar, liegt aber nicht "über" den Controls */
+}
