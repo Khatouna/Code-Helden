@@ -193,26 +193,82 @@ main {
 }
 
 @keyframes textAnim {
-    0%, 20% { opacity: 0; left: 50%; transform: translate(-50%, -50%); }
-    33%, 40% { opacity: 1; left: 50%; transform: translate(-50%, -50%); }
-    53%, 100% { opacity: 1; left: 15%; transform: translate(0, -50%); }
+
+    0%,
+    20% {
+        opacity: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    33%,
+    40% {
+        opacity: 1;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    53%,
+    100% {
+        opacity: 1;
+        left: 15%;
+        transform: translate(0, -50%);
+    }
 }
 
 @keyframes imageAnim {
-    0%, 40% { opacity: 0; width: 0; }
-    40.1% { opacity: 1; width: 0; }
-    53%, 66% { opacity: 1; width: 40%; }
-    80%, 100% { opacity: 1; width: 55%; }
+
+    0%,
+    40% {
+        opacity: 0;
+        width: 0;
+    }
+
+    40.1% {
+        opacity: 1;
+        width: 0;
+    }
+
+    53%,
+    66% {
+        opacity: 1;
+        width: 40%;
+    }
+
+    80%,
+    100% {
+        opacity: 1;
+        width: 55%;
+    }
 }
 
 @keyframes badgeAnim {
-    0%, 75% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-    80%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); .header-section { z-index: 0; } }
+
+    0%,
+    75% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    80%,
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+
+        .header-section {
+            z-index: 0;
+        }
+    }
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .main_section_title {
@@ -222,7 +278,10 @@ main {
     gap: 8px;
 }
 
-.main_section_title img { width: 48px; height: 48px; }
+.main_section_title img {
+    width: 48px;
+    height: 48px;
+}
 
 .main_section_title h2 {
     font-family: 'Arima', sans-serif;
@@ -254,8 +313,8 @@ main {
 
 }
 
-.slider_highlights input { 
-    z-index: 2; 
+.slider_highlights input {
+    z-index: 2;
 }
 
 .slider_highlights_wrapper {
@@ -315,10 +374,21 @@ main {
     margin: 0;
 }
 
-.slider_highlights input[value="one"]:checked~.slider_highlights_wrapper { transform: translateX(0); }
-.slider_highlights input[value="two"]:checked~.slider_highlights_wrapper { transform: translateX(calc(-100% / 4)); }
-.slider_highlights input[value="three"]:checked~.slider_highlights_wrapper { transform: translateX(calc(-100% / 2)); }
-.slider_highlights input[value="four"]:checked~.slider_highlights_wrapper { transform: translateX(calc(-100% / 4 * 3)); }
+.slider_highlights input[value="one"]:checked~.slider_highlights_wrapper {
+    transform: translateX(0);
+}
+
+.slider_highlights input[value="two"]:checked~.slider_highlights_wrapper {
+    transform: translateX(calc(-100% / 4));
+}
+
+.slider_highlights input[value="three"]:checked~.slider_highlights_wrapper {
+    transform: translateX(calc(-100% / 2));
+}
+
+.slider_highlights input[value="four"]:checked~.slider_highlights_wrapper {
+    transform: translateX(calc(-100% / 4 * 3));
+}
 
 .slider_highlights input[type="radio"] {
     appearance: none;
@@ -328,7 +398,8 @@ main {
     background-color: white;
     border-radius: 50%;
     cursor: pointer;
-    margin: 0 10px 40px 10px; /* <--- Hier ist der korrigierte Abstand nach unten (40px) */
+    margin: 0 10px 40px 10px;
+    /* <--- Hier ist der korrigierte Abstand nach unten (40px) */
 }
 
 .slider_highlights input[type="radio"]:hover {
@@ -360,8 +431,13 @@ main {
     transition: all 255ms ease;
 }
 
-.faq_item summary::-webkit-details-marker { display: none; }
-.faq_item summary { list-style: none; }
+.faq_item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq_item summary {
+    list-style: none;
+}
 
 .faq_question {
     display: flex;
@@ -384,7 +460,9 @@ main {
     transition: transform 255ms ease;
 }
 
-.faq_item[open] .faq_arrow { transform: rotate(-135deg); }
+.faq_item[open] .faq_arrow {
+    transform: rotate(-135deg);
+}
 
 .faq_answer {
     background-color: #FFFFFF;
@@ -403,7 +481,10 @@ main {
     color: #54370D;
 }
 
-#contact { width: 90%; margin: 0 auto; }
+#contact {
+    width: 90%;
+    margin: 0 auto;
+}
 
 .contact_intro {
     text-align: center;
@@ -415,7 +496,9 @@ main {
     margin-bottom: 50px;
 }
 
-.contact_form { width: 100%; }
+.contact_form {
+    width: 100%;
+}
 
 .form_row {
     display: flex;
@@ -424,7 +507,11 @@ main {
     margin-bottom: 40px;
 }
 
-.input_container { display: flex; flex-direction: column; flex: 1; }
+.input_container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
 .input_container label {
     font-family: 'Palanquin', sans-serif;
@@ -451,7 +538,12 @@ main {
     outline: none;
 }
 
-.checkbox_section { display: flex; justify-content: center; margin-top: 30px; margin-bottom: 50px; }
+.checkbox_section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
 
 .custom_checkbox {
     display: flex;
@@ -465,7 +557,13 @@ main {
     user-select: none;
 }
 
-.custom_checkbox input { position: absolute; opacity: 0; cursor: pointer; height: 18px; width: 18px; }
+.custom_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+}
 
 .checkmark {
     position: relative;
@@ -478,8 +576,14 @@ main {
     flex-shrink: 0;
 }
 
-.custom_checkbox:hover input~.checkmark { background-color: #F1C953; }
-.custom_checkbox input:checked~.checkmark { background-color: #4EA487; border-color: #4EA487; }
+.custom_checkbox:hover input~.checkmark {
+    background-color: #F1C953;
+}
+
+.custom_checkbox input:checked~.checkmark {
+    background-color: #4EA487;
+    border-color: #4EA487;
+}
 
 .checkmark:after {
     content: "";
@@ -494,7 +598,9 @@ main {
     transform: rotate(45deg);
 }
 
-.custom_checkbox input:checked~.checkmark:after { display: block; }
+.custom_checkbox input:checked~.checkmark:after {
+    display: block;
+}
 
 .privacy_link {
     font-family: 'Palanquin', sans-serif;
@@ -505,9 +611,15 @@ main {
     transition: color 255ms ease;
 }
 
-.privacy_link:hover { color: #4EA487; font-weight: bold; }
+.privacy_link:hover {
+    color: #4EA487;
+    font-weight: bold;
+}
 
-.submit_section { display: flex; justify-content: center; }
+.submit_section {
+    display: flex;
+    justify-content: center;
+}
 
 .send_button {
     background-color: transparent;
@@ -522,8 +634,15 @@ main {
     transition: all 255ms ease;
 }
 
-.send_button:hover { color: #F1C953; background-color: #4EA487; }
-.send_button:active { background-color: #4EA487; color: #F1C953; }
+.send_button:hover {
+    color: #F1C953;
+    background-color: #4EA487;
+}
+
+.send_button:active {
+    background-color: #4EA487;
+    color: #F1C953;
+}
 
 /* =========================================
    GEMEINSAME ELEMENTE FÜR SEITE 1, 2, 3
@@ -677,7 +796,9 @@ main {
     font-size: 14px;
 }
 
-.intro-text { width: 100%; }
+.intro-text {
+    width: 100%;
+}
 
 .intro-text p {
     font-family: 'Palanquin', sans-serif;
@@ -746,22 +867,32 @@ main {
 .tipps-list li::marker {
     font-weight: 700;
     color: #4EA487;
+    text-decoration: none;
 }
 
-.tipps-link {
+.tipps-link,
+.useful-link {
     color: #4EA487;
     font-weight: 700;
+    text-decoration: none !important;
+    /* Entfernt den Unterstrich dauerhaft */
     transition: color 0.2s ease;
 }
 
-.tipps-link:hover {
-    color: #54370D;
-    text-decoration-line: none;
+.tipps-link:hover,
+.useful-link:hover {
+    color: #F1C953;
+    text-decoration: none !important;
+}
+
+.tipps-link strong,
+.useful-link strong {
+    color: inherit;
 }
 
 /* CTA & Share */
 .cta-section {
-    width: 100%; 
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 64px;
@@ -834,8 +965,13 @@ main {
     color: #F1C953;
 }
 
-.share-btn:hover { background: #3d8a70; }
-.share-toggle:checked ~ .share-btn { pointer-events: none; }
+.share-btn:hover {
+    background: #3d8a70;
+}
+
+.share-toggle:checked~.share-btn {
+    pointer-events: none;
+}
 
 .share-overlay {
     display: none;
@@ -845,7 +981,9 @@ main {
     cursor: pointer;
 }
 
-.share-toggle:checked ~ .share-overlay { display: block; }
+.share-toggle:checked~.share-overlay {
+    display: block;
+}
 
 .share-popup {
     position: absolute;
@@ -860,7 +998,7 @@ main {
     z-index: 100;
 }
 
-.share-toggle:checked ~ .share-popup {
+.share-toggle:checked~.share-popup {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
@@ -885,7 +1023,9 @@ main {
     line-height: 1;
 }
 
-.share-close:hover { transform: scale(1.15); }
+.share-close:hover {
+    transform: scale(1.15);
+}
 
 .share-popup-icons {
     display: flex;
