@@ -1,9 +1,6 @@
-/* =========================================================================
-   1. BIG SCREEN VIEW (Bildschirme über 1440px)
-   ========================================================================= */
+/* 1. BIG SCREEN VIEW (Bildschirme über 1440px) */
 .mobile-bottom-nav {
     display: none;
-    /* Versteckt den Handy-Footer auf Desktop */
 }
 
 @media (min-width: 1440px) {
@@ -19,23 +16,18 @@
         max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
-        /* margin-top und margin-bottom bleiben UNBERÜHRT, damit deine Gaps bleiben! */
     }
 }
 
-/* =========================================================================
-   2. MOBILE & TABLET VIEW (NUR unter 900px)
-   ========================================================================= */
+/* 2. MOBILE & TABLET VIEW (NUR unter 900px) */
 @media (max-width: 900px) {
 
-    /* --- ANTI-WACKEL (Nur das Wichtigste) --- */
     html,
     body {
         overflow-x: hidden;
         max-width: 100vw;
     }
 
-    /* --- 1. HEADER (Logo in die Mitte, Rest weg) --- */
     .main-header {
         justify-content: center;
         padding: 0;
@@ -49,9 +41,10 @@
         display: none;
     }
 
-    /* --- 2. STARTSEITE: HERO BEREICH --- */
+    /* STARTSEITE: HERO BEREICH */
     .header-section {
-        height: 500px;
+        height: 600px !important;
+        background-color: #F1C953 !important;
     }
 
     .text-container {
@@ -60,25 +53,30 @@
 
     .image-container {
         width: 100% !important;
-        height: 60% !important;
-        background-position: center !important;
+        height: 100% !important;
+        background-position: 70% center !important;
+        background-size: cover !important;
         animation: none !important;
+        opacity: 1 !important;
         clip-path: none !important;
-        border-bottom-left-radius: 50% 20% !important;
-        border-bottom-right-radius: 50% 20% !important;
+
+        border-radius: 0 !important;
+        border-top-left-radius: 90% 65% !important;
     }
 
     .badge-container {
         animation: none !important;
-        top: 25% !important;
-        left: 50% !important;
+        opacity: 1 !important;
+        display: block !important;
+        top: 20% !important;
+        left: 30% !important;
         transform: translate(-50%, -50%) !important;
-        width: 130px !important;
-        height: 130px !important;
+        width: 120px !important;
+        height: 120px !important;
+        z-index: 10 !important;
     }
 
-    /* --- 3. BEREICHE ENGER MACHEN (Ohne Gaps zu zerstören!) --- */
-    /* Anstatt den ganzen Wrapper zu ändern, geben wir nur den Sektionen Ränder */
+    /* BEREICHE ENGER MACHEN */    
     #highlights,
     #faq,
     #contact,
@@ -95,7 +93,7 @@
         box-sizing: border-box;
     }
 
-    /* --- 4. STARTSEITE: HIGHLIGHTS, FAQ, KONTAKT --- */
+    /* STARTSEITE: HIGHLIGHTS, FAQ, KONTAKT */
     .slider_highlights {
         border-top-right-radius: 40px;
         align-items: flex-end;
@@ -126,7 +124,6 @@
         gap: 30px;
     }
 
-    /* --- 5. CAROUSEL FIX (!important Zwang, damit es nicht ausbricht) --- */
     .destinations-section {
         width: 100vw !important;
         max-width: 100vw !important;
@@ -134,23 +131,19 @@
         padding: 0 !important;
         box-sizing: border-box !important;
         position: relative !important;
-        /* WICHTIG: Damit wir die Punkte darunter platzieren können */
     }
 
-    /* NEU: Hier "zeichnen" wir die grünen Slider-Punkte rein mit CSS unter den Slider! */
     .destinations-section::after {
         content: "" !important;
         display: none !important;
         width: 134px !important;
         height: 16px !important;
         margin: 0px auto 40px auto !important;
-        /* Zeichnet das aktive Element (Pille) und 4 inaktive Punkte in deiner grünen Farbe (#4EA487) */
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='134' height='16'%3E%3Crect width='30' height='16' rx='8' fill='%234EA487'/%3E%3Ccircle cx='48' cy='8' r='8' fill='%234EA487' opacity='0.3'/%3E%3Ccircle cx='74' cy='8' r='8' fill='%234EA487' opacity='0.3'/%3E%3Ccircle cx='100' cy='8' r='8' fill='%234EA487' opacity='0.3'/%3E%3Ccircle cx='126' cy='8' r='8' fill='%234EA487' opacity='0.3'/%3E%3C/svg%3E") !important;
         background-repeat: no-repeat !important;
         background-position: center !important;
     }
 
-    /* Das neue, klickbare Menü formatieren */
     .carousel-nav-mobile {
         display: flex !important;
         justify-content: center !important;
@@ -159,7 +152,6 @@
         width: 100% !important;
     }
 
-    /* Das Aussehen der klickbaren Punkte */
     .carousel-nav-mobile a {
         width: 16px !important;
         height: 16px !important;
@@ -169,7 +161,6 @@
         text-decoration: none !important;
     }
 
-    /* Der aktive/gehoverte Punkt (wird zur Pille) */
     .carousel-nav-mobile a:hover,
     .carousel-nav-mobile a:active {
         opacity: 1 !important;
@@ -192,7 +183,6 @@
         scroll-snap-type: x mandatory !important;
         gap: 15px !important;
         padding: 10px 20px 25px 20px !important;
-        /* Unteres Padding etwas verringert für die Punkte */
         margin: 0 !important;
         box-sizing: border-box !important;
         justify-content: flex-start !important;
@@ -205,7 +195,6 @@
 
     .slider-item {
         width: 80vw !important;
-        /* Bild nimmt 80% ein, damit das nächste angeschnitten bleibt (wie im Screenshot) */
         height: 350px !important;
         flex: 0 0 auto !important;
         margin: 0 !important;
@@ -223,7 +212,7 @@
         z-index: 1 !important;
     }
 
-    /* --- 6. SEITEN 2 & 3 (ARTIKEL) --- */
+    /* SEITEN 2 & 3 */
     .hero-section {
         flex-direction: column;
         gap: 30px;
@@ -287,40 +276,70 @@
         margin: 0 !important;
     }
 
-    /* --- 7. FOOTER (Grün + Gelb) --- */
+    /* FOOTER  */
     .main-footer {
-        flex-direction: row;
-        padding: 40px 20px 100px 20px;
-        gap: 10px;
-        text-align: center;
-        box-sizing: border-box;
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        padding: 20px 20px 80px 20px !important;
+        gap: 5px 0 !important; 
+        align-items: center !important;
+        box-sizing: border-box !important;
     }
 
-    .footer-menu,
-    .footersome {
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
+    .footer-menu {
+        display: contents !important;
+    }
+
+    .footer-menu>div:nth-of-type(1) {
+        grid-column: 1 / 3 !important;
+        grid-row: 1 / 2 !important;
+        justify-self: start !important;
+        text-align: left !important;
+    }
+
+    .footer-menu>div:nth-of-type(2) {
+        grid-column: 1 / 3 !important;
+        grid-row: 2 / 3 !important;
+        justify-self: start !important;
+        text-align: left !important;
+        margin-bottom: 0 !important;
+    }
+
+    .footer-menu .copyright {
+        grid-column: 1 / 2 !important;
+        grid-row: 3 / 4 !important;
+        justify-self: start !important;
+        text-align: left !important;
     }
 
     .footer-socialMedia {
-        justify-content: center;
+        grid-column: 2 / 3 !important;
+        grid-row: 3 / 4 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    .footersome {
+        display: inline-block !important;
+        gap: 0 !important;
     }
 
     .mobile-bottom-nav {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #F1C953;
-        height: 70px;
-        justify-content: space-around;
-        align-items: center;
-        z-index: 1000;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+        display: flex !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        background-color: #F1C953 !important;
+        height: 70px !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        z-index: 1000 !important;
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1) !important;
     }
 
     /* --- TEXT-GRÖSSEN FÜR HANDY --- */
