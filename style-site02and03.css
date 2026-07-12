@@ -1,4 +1,4 @@
-/* Reset */
+/* ─── Reset ─────────────────────────────────────── */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ main {
     flex: 1;
 }
 
-/* Content Wrapper  */
+/*  Content Wrapper */
 .content-wrapper {
     max-width: 1200px;
     width: 100%;
@@ -34,13 +34,13 @@ main {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 100px;
 }
 
 .main-header img {
     height: 72px;
     width: 72px;
-    margin: 0 120px 0 120px;
+    margin: 0 120px 0 0;
 }
 
 .nav-bar {
@@ -159,6 +159,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 0;
+    align-items: center;
 }
 
 .headline-Author {
@@ -186,7 +187,7 @@ h1 {
     line-height: 120%;
     color: #54370D;
     text-align: left;
-    margin-top: auto;
+    margin-top: 8px;
 }
 
 /* Intro Text */
@@ -200,6 +201,44 @@ h1 {
     font-size: 24px;
     line-height: 120%;
     color: #3D3D3D;
+}
+
+/*  Video  */
+.video-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.video-wrapper{
+    width: 930px;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.video-wrapper video {
+    width: 931px;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Play Toggle + Icon komplett ausblenden */
+.play-toggle {
+    display: none;
+}
+
+.play-icon {
+    display: none;
 }
 
 /* Diagramm */
@@ -242,9 +281,8 @@ h1 {
 .beach-diagram p,
 .acommodation-diagram p {
     text-align: left;
-    min-height: 275px;
+    min-height: 280px;
 }
-
 
 
 
@@ -267,6 +305,67 @@ h1 {
 .text-list li::marker {
     color: #3D3D3D;
     font-size: 14px;
+}
+/* Pro Tipps */
+.pro-tipps-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+.pro-tipps-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #4EA487;
+    border-radius: 10px;
+    padding: 8px 16px;
+    width: fit-content;
+    transform: rotate(-13.67deg);
+    transform-origin: left center;
+    margin-left: 8px;
+    margin-bottom: -40px;
+}
+
+.pro-tipps-badge svg {
+    transform: rotate(15deg);
+    transform-origin: center;
+}
+
+.pro-tipps-badge span {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    color: #F1C953;
+}
+
+.pro-tipps-box {
+    background: rgba(78, 164, 135, 0.2);
+    border-radius: 30px;
+    padding: 26px 32px 24px;
+    margin-left: 85px;
+}
+
+.tipps-list li::marker {
+    font-weight: 700;
+    color: #4EA487;
+}
+
+
+
+.tipps-link {
+    color: #4EA487;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.tipps-link:hover {
+    color: #54370D;
 }
 
 
@@ -293,12 +392,11 @@ h1 {
 }
 
 .cta-arrow {
-    width: 95px;
-    height: 98px;
     position: absolute;
-    left: 20px;       
-    bottom: 8px;       
-    
+    left: 0;
+    bottom: 8px;
+    width: clamp(70px, 8vw, 110px);   /* ← skaliert mit Viewport */
+    height: auto;                      /* ← proportional */
 }
 
 
@@ -335,7 +433,7 @@ h1 {
     background: #3d8a70;
 }
 
-/* Share Wrapper  */
+/* Share Wrapper */
 .share-toggle {
     display: none;
 }
@@ -408,7 +506,7 @@ h1 {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
-    z-index: 100;
+    z-index: 200;
 }
 
 .share-toggle:checked ~ .share-popup {
@@ -514,7 +612,11 @@ h1 {
     width: 32px;
 }
 
-/*  Sonstige bestehende Klassen */
+/* Sonstige bestehende Klassen */
+
+
+
+
 .contact_confirmation {
     max-width: 650px;
     margin: 60px auto;
