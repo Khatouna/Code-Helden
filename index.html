@@ -11,12 +11,10 @@
 
 <body>
 
-
     <header class="main-header">
         <a href="">
             <img src="./assets/icons/TravelBlog_icon.png" alt="main logo">
         </a>
-
         <div class="nav-bar">
             <a href="#highlights">Highlights</a>
             <a href="#faq">FAQ</a>
@@ -24,7 +22,56 @@
         </div>
     </header>
 
-    <section class="header-section"></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="header-section">
+
+        <!-- 1. Text -->
+        <div class="text-container">
+            <h2>Cappadocia</h2>
+            <p>
+                From sunrise balloons to<br>
+                hidden cave dwellings,<br>
+                every moment feels unreal<br>
+                in the best way.
+            </p>
+        </div>
+
+        <!-- 2. Bild + Button (beide im gleichen Container) -->
+        <div class="image-container"></div>
+        <div class="badge-container">
+            <img src="./assets/icons/badge.png" alt="Badge" class="rotating-badge">
+        </div>
+
+        <!-- 3. SVG mit der S‑Kurve (unsichtbar) -->
+        <svg class="svg-defs">
+            <clipPath id="sCurve" clipPathUnits="objectBoundingBox">
+                <!-- 
+                    S‑Kurve: 
+                    - bei y=0.5 (50% Höhe) liegt der Punkt bei x=0.2 (20%)
+                    - deshalb steht der Button auf left:20%, top:50%
+                -->
+                <path d="M 0.4,0 
+                         C 0.1,0   0.1,0.4   0.2,0.5 
+                         C 0.3,0.6 0.3,0.8   0.1,1 
+                         L 1,1 L 1,0 Z" />
+            </clipPath>
+        </svg>
+
+    </section>
 
 
 
