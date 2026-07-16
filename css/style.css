@@ -18,6 +18,11 @@ main {
     width: 100%;
 }
 
+html,
+body {
+    min-width: 320px;
+}
+
 .content-wrapper {
     max-width: 1200px;
     width: 100%;
@@ -130,7 +135,7 @@ main {
     z-index: 2;
     pointer-events: none;
     opacity: 0;
-    animation: textAnim 15s ease-in-out forwards;
+    animation: textAnim 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .text-container h2 {
@@ -150,13 +155,13 @@ main {
     top: 0;
     height: 100%;
     width: 0;
-    background-image: url('./assets/img/kapadokia.png');
+    background-image: url('../assets/img/kapadokia.png');
     background-size: cover;
     background-position: center;
     clip-path: url(#sCurve);
     z-index: 2;
     overflow: visible;
-    animation: imageAnim 15s ease-in-out forwards;
+    animation: imageAnim 4s ease-in-out forwards;
 }
 
 .badge-container {
@@ -168,14 +173,14 @@ main {
     height: 120px;
     z-index: 3;
     opacity: 0;
-    animation: badgeAnim 15s ease-in-out forwards;
+    animation: badgeAnim 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .rotating-badge {
-    width: 100%;
-    height: 100%;
+    width: 130%;
+    height: 130%;
     display: block;
-    animation: spin 6s infinite linear;
+    animation: spin 15s infinite linear;
 }
 
 .svg-defs {
@@ -187,20 +192,19 @@ main {
 @keyframes textAnim {
 
     0%,
-    20% {
+    15% {
         opacity: 0;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
-    33%,
-    40% {
+    25% {
         opacity: 1;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
-    53%,
+    50%,
     100% {
         opacity: 1;
         left: 15%;
@@ -237,19 +241,15 @@ main {
 @keyframes badgeAnim {
 
     0%,
-    75% {
+    60% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0.5);
+        transform: translate(-50%, -50%) scale(0.8);
     }
 
-    80%,
+    75%,
     100% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
-
-        .header-section {
-            z-index: 0;
-        }
     }
 }
 
@@ -439,7 +439,7 @@ main {
     font-family: 'Palanquin', sans-serif;
     font-size: 24px;
     font-weight: bold;
-    color: #54370D;
+    color: var(--color-font-main);
     line-height: 1;
     outline: none;
 }
@@ -459,19 +459,15 @@ main {
 
 .faq_answer {
     background-color: #FFFFFF;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 11px 14px 14px 16px;
+    border-radius: 10px;
     margin-top: 10px;
 }
 
 .faq_answer p {
     margin: 0;
-    text-align: left;
-    font-family: 'Palanquin';
-    font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
-    color: #54370D;
 }
 
 #contact {

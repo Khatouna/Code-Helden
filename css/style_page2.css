@@ -12,6 +12,7 @@
     border-radius: 50px;
     overflow: hidden;
     pointer-events: auto;
+    transition: box-shadow 0.3s ease;
 }
 
 .video-wrapper video {
@@ -23,4 +24,8 @@
 
 .play-icon {
     display: none !important;
+}
+
+.video-wrapper:hover {
+    box-shadow: 0 0 15px 5px rgba(241, 201, 83, 0.7);
 }
