@@ -552,40 +552,70 @@ main {
    DESKTOP XL — ab 1440px
 ═══════════════════════════════════════════════════ */
 @media (min-width: 1440px) {
-    .content-wrapper {
-        max-width: 1400px;
-        gap: 100px;
-        margin: 100px auto 140px auto;
-    }
 
-    .main-header {
-        padding: 0 160x;
-    }
-
-    .main-header>a img {
-        margin: 0 160px 0 0;
-    }
-
-    .hero-author {
-        width: 300px;
-    }
-
-    .diagram-Rain-periopds-section img {
-        max-width: 800px;
-    }
-
-    .diagram-beach-acommodation {
-        gap: 100px;
-    }
-
+    .main-header,
     .main-footer {
-        padding: 40px 160px;
+        max-width: 5000px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .tab-bar {
-        display: none;
+    /* 1. STANDARD FÜR ALLE SEITEN: Header, Footer und Content bleiben bei 1440px */
+    .new-header,
+    .content-wrapper {
+        max-width: 1440px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
+    /* 2. AUSNAHME FÜR DIE STARTSEITE: Hier wachsen Header, FOOTER und gelber Bereich auf 1800px */
+    .home-header .new-header,
+    .home-footer .new-header,
+    .header-section {
+        max-width: 1800px !important;
+    }
+
+    /* 3. Navigation (Highlights, FAQ etc.) auf allen Seiten direkt links ans Logo schieben */
+    header .new-header {
+        justify-content: flex-start !important;
+    }
+
+    /* 4. Logo-Abstände steuern */
+    /* Auf Unterseiten: Normaler Einzug (120px), damit es nicht aus der Reihe tanzt */
+    .main-header img {
+        margin-left: 120px !important;
+        margin-right: 80px !important;
+        /* Abstand zu den Menüpunkten */
+    }
+
+    /* Auf der Startseite: Logo ganz an die 1800px-Kante setzen (0px) */
+    .home-header img {
+        margin-left: 0 !important;
+    }
+
+    /* 5. Text-Animation im gelben Bereich */
+    @keyframes textAnim {
+
+        0%,
+        15% {
+            opacity: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        25% {
+            opacity: 1;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        50%,
+        100% {
+            opacity: 1;
+            left: 120px;
+            transform: translate(0, -50%);
+        }
+    }
 }
 
 
@@ -612,7 +642,7 @@ main {
         gap: 0;
     }
 
-    .main-header > a {
+    .main-header>a {
         display: inline-flex;
         align-items: center;
         height: fit-content;
@@ -624,14 +654,14 @@ main {
         margin: 0;
     }
 
-    
+
 
     .nav-bar {
         display: none;
-        
+
     }
 
-    
+
 
     /* ── Hero — einspaltiges Layout ── */
     /* Subheadline + H1 groß oben, darunter Beschreibungstext */
@@ -733,7 +763,7 @@ main {
         gap: 20px;
     }
 
-   
+
 
     .text-list {
         padding-left: 24px;
@@ -818,7 +848,7 @@ main {
         gap: 20px;
     }
 
-    
+
 
     /* Pfeil bleibt sichtbar, links vom Button positioniert */
     .cta-arrow {
@@ -952,7 +982,7 @@ main {
         padding: 10px 12px;
     }
 
-    .main-header > a {
+    .main-header>a {
         display: inline-flex;
         align-items: center;
         height: fit-content;
@@ -988,7 +1018,7 @@ main {
     h1 {
         font-size: 40px;
     }
-    
+
     h3 {
         font-size: 20px;
     }
@@ -996,11 +1026,11 @@ main {
     .subheadline-Hero {
         font-size: 20px;
     }
-    
+
     .p-hero-section {
         font-size: 18px;
     }
-    
+
     .author-image img {
         width: 72px;
         height: 72px;
@@ -1015,7 +1045,7 @@ main {
         gap: 6px 12px;
     }
 
-    
+
 
     /* Text */
     .intro-text p {
@@ -1033,6 +1063,7 @@ main {
     .text-list {
         font-size: 16px;
     }
+
     /* Diagramm */
     .diagram-beach-acommodation {
         gap: 28px;

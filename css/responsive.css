@@ -14,12 +14,33 @@
         margin-right: auto;
     }
 
-    .content-wrapper {
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
+    /* 1. EINHEITLICH FÜR ALLE SEITEN: Header, Footer und gelber Bereich auf 1800px */
+    .new-header,
+    .header-section {
+        max-width: 1800px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
+    /* 2. DER HAUPTINHALT (Artikel, Highlights, FAQ) bleibt auf allen Seiten bei 1440px */
+    .content-wrapper {
+        max-width: 1440px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* 3. Navigation auf allen Seiten direkt links ans Logo schieben */
+    header .new-header {
+        justify-content: flex-start !important;
+    }
+
+    /* 4. Logo auf allen Seiten ganz links an die 1800px-Kante setzen und 80px Platz zum Menü lassen */
+    .main-header img {
+        margin-left: 0 !important;
+        margin-right: 80px !important;
+    }
+
+    /* 5. Text-Animation im gelben Bereich (Startseite) */
     @keyframes textAnim {
 
         0%,
@@ -38,7 +59,7 @@
         50%,
         100% {
             opacity: 1;
-            left: calc(50% - 600px);
+            left: 120px;
             transform: translate(0, -50%);
         }
     }
@@ -52,7 +73,7 @@
     .content-wrapper {
         box-sizing: border-box;
         padding-left: 20px;
-        padding-right:20px;
+        padding-right: 20px;
     }
 
 
@@ -304,7 +325,7 @@
         width: 100%;
         border-radius: 20px;
         padding-left: 20px;
-        padding-right:20px;        
+        padding-right: 20px;
     }
 
     .cta-arrow {
