@@ -459,6 +459,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
     font-family: 'Palanquin', sans-serif;
     font-size: 24px;
     font-weight: bold;
@@ -468,6 +469,7 @@ body {
 }
 
 .faq_arrow {
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
     border-right: 2px solid #54370D;
